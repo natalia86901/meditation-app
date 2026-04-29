@@ -25,10 +25,34 @@
 #myButton {
     display: none;
 }
+
 @media all and (max-width:800px) {
    #myButton {
-    display: block;
-    padding: 10px;
-    background: linear-gradient(to right,#ACB6E5, #f0f3f5 );
+  display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.2s ease;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    #myButton:active {
+        transform: translate(-50%, -50%) scale(0.93);
+        background: rgba(255, 255, 255, 0.25);
+    }
    }
-}
+
